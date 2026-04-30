@@ -118,3 +118,11 @@ TDD는 프로그램 실행할 때(런타임) 오류 나서 사용자가 직접 �
 
 > **기획의 장기기억은 md파일에.**
 > **개발의 장기기억은 TDD에.**
+
+---
+
+[📄 GitHub에서 소스 보기](https://github.com/haseo-ai/tdd-prompts-ai)
+
+---
+
+*Made by [haseo-ai](https://github.com/haseo-ai) ♥ with oclo*

@@ -118,3 +118,11 @@ If you've been relying on markdown files for long-term memory because session me
 
 > **Planning memory → Markdown files**
 > **Development memory → TDD**
+
+---
+
+[📄 View Source on GitHub](https://github.com/haseo-ai/tdd-prompts-ai)
+
+---
+
+*Made by [haseo-ai](https://github.com/haseo-ai) ♥ with oclo*
