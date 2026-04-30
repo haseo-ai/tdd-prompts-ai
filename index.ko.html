@@ -5,33 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI 에이전트를 위한 TDD 프롬프트</title>
 
-  <!-- Open Graph -->
   <meta property="og:title" content="AI 에이전트를 위한 TDD 프롬프트">
   <meta property="og:description" content="AI 재작업을 눈에 띄게 줄이는 프롬프트 — 테스트 주도 개발(TDD)">
   <meta property="og:image" content="https://haseo-ai.github.io/tdd-prompts-ai/assets/1000576710.jpg">
   <meta property="og:url" content="https://haseo-ai.github.io/tdd-prompts-ai/index.ko.html">
   <meta property="og:type" content="website">
 
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="AI 에이전트를 위한 TDD 프롬프트">
   <meta name="twitter:description" content="AI 재작업을 눈에 띄게 줄이는 프롬프트 — 테스트 주도 개발(TDD)">
   <meta name="twitter:image" content="https://haseo-ai.github.io/tdd-prompts-ai/assets/1000576710.jpg">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.8.1/github-markdown-light.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <style>
-    .markdown-body {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 45px 24px;
-    }
-    .lang-switch {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 16px 24px 0;
-      text-align: right;
-      font-size: 14px;
-    }
+    .markdown-body { max-width: 800px; margin: 0 auto; padding: 45px 24px; }
+    .lang-switch { max-width: 800px; margin: 0 auto; padding: 16px 24px 0; text-align: right; font-size: 14px; }
     .lang-switch a { color: #0969da; text-decoration: none; }
     .lang-switch a:hover { text-decoration: underline; }
     .lang-switch a.active { font-weight: 700; color: #1f2328; }
@@ -45,9 +34,11 @@
     <span class="sep">|</span>
     <a href="index.ko.html" class="active">한국어</a>
   </div>
-  <article class="markdown-body">
+  <article class="markdown-body" id="content"></article>
 
-# AI 에이전트를 위한 TDD 프롬프트
+  <script>
+    marked.setOptions({ breaks: true, gfm: true });
+    document.getElementById('content').innerHTML = marked.parse(`# AI 에이전트를 위한 TDD 프롬프트
 
 > AI 재작업을 눈에 띄게 줄이는 프롬프트 — 테스트 주도 개발(TDD)
 
@@ -95,9 +86,9 @@ TDD의 장점은 MVP 때 빛나는 것이 아닙니다. 빛나는 순간은:
 
 ### 1. TDD 시작
 
-```
+\`\`\`
 "우리 지금 테스트 주도 개발(TDD) 하고 있나?"
-```
+\`\`\`
 
 > **주의:** TDD는 기본값이 터미널 CLI 환경입니다. 화면UI(프론트엔드)에 TDD를 적용하면 디자인 창의성이 낮아질 수 있으니 선택할 것.
 >
@@ -105,9 +96,9 @@ TDD의 장점은 MVP 때 빛나는 것이 아닙니다. 빛나는 순간은:
 
 ### 2. 전체 범위 TDD
 
-```
+\`\`\`
 "우리 프로젝트 전체에 테스트 주도 개발(TDD)로 리팩토링 하자."
-```
+\`\`\`
 
 > 메인 에이전트는 토큰 소모를 줄이려 자기 할 일을 축소하려 합니다. "전체 범위"라고 명시하지 않으면 새로운 작업에만 TDD를 적용합니다.
 >
@@ -117,35 +108,35 @@ TDD의 장점은 MVP 때 빛나는 것이 아닙니다. 빛나는 순간은:
 
 ### 3. 무중단 멀티에이전트
 
-```
+\`\`\`
 "Phase1~10을 무중단으로 진행해.
 서브에이전트가 타임아웃되면 3회까지 재시도해보고,
 안 되면 메인에이전트가 해당 세부 스프린트만 처리하고 다음 스프린트로 넘어가."
-```
+\`\`\`
 
 > 'Phase1~10'은 예시입니다. 메인 에이전트가 정의한 내용에 따라 바꿔 쓰세요.
 
 ### 4. 진행 상황 확인 (주의!)
 
-```
+\`\`\`
 "잘 진행되고 있나?"
-```
+\`\`\`
 
 > ⚠️ **"진행 상황 체크"라고 물어보면 안 됩니다.** '체크'라는 키워드에 메인 에이전트가 **새로운 할 일**이라고 반응하여, 본래 하던 작업을 아예 손 놓습니다.
 
 ### 5. 테스트 직접 실행
 
-```
+\`\`\`
 "네가 직접 테스트 실행해서 확인해줘."
-```
+\`\`\`
 
 > TDD가 완성되어도 메인 에이전트는 테스트 세트에 손도 안 대어본 채 사용자에게 돌려주는 경우가 많습니다.
 
 ### 6. QA 및 코드 리뷰
 
-```
+\`\`\`
 "QA, 코드리뷰 해줘."
-```
+\`\`\`
 
 > 테스트 세트가 **모두 안전하게 돌아간 후**에만 이 말을 하세요. TDD 과정에서 기획 스펙을 망쳐놓거나 몰랐던 오류를 발견했을 수 있습니다.
 >
@@ -173,7 +164,7 @@ TDD는 프로그램 실행할 때(런타임) 오류 나서 사용자가 직접 �
 ---
 
 *Made by [haseo-ai](https://github.com/haseo-ai) ♥ with oclo*
-
-  </article>
+`);
+  </script>
 </body>
 </html>

@@ -5,33 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TDD Prompts for AI Agents</title>
 
-  <!-- Open Graph -->
   <meta property="og:title" content="TDD Prompts for AI Agents">
   <meta property="og:description" content="Prompts That Dramatically Reduce AI Rework — Test-Driven Development for AI coding agents.">
   <meta property="og:image" content="https://haseo-ai.github.io/tdd-prompts-ai/assets/1000576710.jpg">
   <meta property="og:url" content="https://haseo-ai.github.io/tdd-prompts-ai/">
   <meta property="og:type" content="website">
 
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="TDD Prompts for AI Agents">
   <meta name="twitter:description" content="Prompts That Dramatically Reduce AI Rework — Test-Driven Development for AI coding agents.">
   <meta name="twitter:image" content="https://haseo-ai.github.io/tdd-prompts-ai/assets/1000576710.jpg">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.8.1/github-markdown-light.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <style>
-    .markdown-body {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 45px 24px;
-    }
-    .lang-switch {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 16px 24px 0;
-      text-align: right;
-      font-size: 14px;
-    }
+    .markdown-body { max-width: 800px; margin: 0 auto; padding: 45px 24px; }
+    .lang-switch { max-width: 800px; margin: 0 auto; padding: 16px 24px 0; text-align: right; font-size: 14px; }
     .lang-switch a { color: #0969da; text-decoration: none; }
     .lang-switch a:hover { text-decoration: underline; }
     .lang-switch a.active { font-weight: 700; color: #1f2328; }
@@ -45,9 +34,11 @@
     <span class="sep">|</span>
     <a href="index.ko.html">한국어</a>
   </div>
-  <article class="markdown-body">
+  <article class="markdown-body" id="content"></article>
 
-# TDD Prompts for AI Agents
+  <script>
+    marked.setOptions({ breaks: true, gfm: true });
+    document.getElementById('content').innerHTML = marked.parse(`# TDD Prompts for AI Agents
 
 > Prompts That Dramatically Reduce AI Rework: Test-Driven Development for AI coding agents.
 
@@ -95,9 +86,9 @@ They can be used together, but it's wise to apply them **separately** — build 
 
 ### 1. Start TDD
 
-```
+\`\`\`
 "Are we actually doing Test-Driven Development (TDD) right now?"
-```
+\`\`\`
 
 > **Note:** TDD assumes a terminal/CLI environment. If you apply TDD to UI/Frontend work, it can reduce design creativity — choose whether to include it.
 >
@@ -105,9 +96,9 @@ They can be used together, but it's wise to apply them **separately** — build 
 
 ### 2. Full-Scope TDD
 
-```
+\`\`\`
 "Refactor the entire project using Test-Driven Development (TDD)."
-```
+\`\`\`
 
 > The main agent tends to minimize its workload to reduce token usage. Unless you say "entire project," it will only apply TDD to new tasks.
 >
@@ -117,35 +108,35 @@ They can be used together, but it's wise to apply them **separately** — build 
 
 ### 3. Uninterrupted Multi-Agent
 
-```
+\`\`\`
 "Proceed through Phase 1 to Phase 10 without interruption.
 If a sub-agent times out, retry up to three times.
 If it still fails, the main agent should handle only that sprint and then move on."
-```
+\`\`\`
 
 > "Phase 1–10" is just an example — adjust according to what the main agent defines.
 
 ### 4. Progress Check (Careful!)
 
-```
+\`\`\`
 "Is everything going smoothly?"
-```
+\`\`\`
 
 > ⚠️ **Do NOT say "Check the progress."** The keyword "check" makes the agent interpret it as a **new task**, causing it to abandon the original work entirely.
 
 ### 5. Verify Tests
 
-```
+\`\`\`
 "Run the tests yourself and verify the results."
-```
+\`\`\`
 
 > Even after finishing TDD, the main agent often won't run the test suite and will just hand it back to you.
 
 ### 6. QA & Code Review
 
-```
+\`\`\`
 "Do QA and code review."
-```
+\`\`\`
 
 > Say this **only after the entire test suite passes safely**. During TDD, the agent may have broken the original spec or discovered hidden issues.
 >
@@ -173,7 +164,7 @@ If you've been relying on markdown files for long-term memory because session me
 ---
 
 *Made by [haseo-ai](https://github.com/haseo-ai) ♥ with oclo*
-
-  </article>
+`);
+  </script>
 </body>
 </html>
