@@ -7,7 +7,7 @@
 
   <!-- Open Graph -->
   <meta property="og:title" content="TDD Prompts for AI Agents">
-  <meta property="og:description" content="Prompts That Dramatically Reduce AI Rework — Test-Driven Development for AI coding agents. AI 재작업을 눈에 띄게 줄이는 프롬프트.">
+  <meta property="og:description" content="Prompts That Dramatically Reduce AI Rework — Test-Driven Development for AI coding agents.">
   <meta property="og:image" content="https://haseo-ai.github.io/tdd-prompts-ai/assets/1000576710.jpg">
   <meta property="og:url" content="https://haseo-ai.github.io/tdd-prompts-ai/">
   <meta property="og:type" content="website">
@@ -18,199 +18,162 @@
   <meta name="twitter:description" content="Prompts That Dramatically Reduce AI Rework — Test-Driven Development for AI coding agents.">
   <meta name="twitter:image" content="https://haseo-ai.github.io/tdd-prompts-ai/assets/1000576710.jpg">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.8.1/github-markdown-light.min.css">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.7;
-      color: #1a1a2e;
-      background: #fafafa;
-    }
-    .container {
+    .markdown-body {
       max-width: 800px;
       margin: 0 auto;
-      padding: 40px 24px;
+      padding: 45px 24px;
     }
     .lang-switch {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 16px 24px 0;
       text-align: right;
-      margin-bottom: 24px;
-    }
-    .lang-switch a {
-      color: #6c63ff;
-      text-decoration: none;
       font-size: 14px;
     }
+    .lang-switch a { color: #0969da; text-decoration: none; }
     .lang-switch a:hover { text-decoration: underline; }
-    .lang-switch a.active { font-weight: 700; color: #1a1a2e; }
-    .lang-switch .sep { margin: 0 8px; color: #ccc; }
-    h1 { font-size: 2em; margin-bottom: 8px; color: #1a1a2e; }
-    .subtitle { color: #6c63ff; font-size: 1.1em; margin-bottom: 24px; }
-    .hero-img {
-      width: 100%;
-      border-radius: 12px;
-      margin-bottom: 32px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    }
-    h2 { font-size: 1.5em; margin: 32px 0 16px; color: #2d2d44; border-bottom: 2px solid #6c63ff; padding-bottom: 8px; display: inline-block; }
-    p { margin-bottom: 16px; }
-    blockquote {
-      border-left: 4px solid #6c63ff;
-      padding: 12px 20px;
-      margin: 16px 0;
-      background: #f0efff;
-      border-radius: 0 8px 8px 0;
-      font-style: italic;
-    }
-    blockquote p { margin-bottom: 4px; }
-    .prompt-box {
-      background: #1a1a2e;
-      color: #e0e0e0;
-      padding: 16px 20px;
-      border-radius: 8px;
-      margin: 12px 0;
-      font-family: 'SF Mono', 'Fira Code', monospace;
-      font-size: 0.95em;
-    }
-    .prompt-label {
-      font-weight: 700;
-      color: #6c63ff;
-      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-      margin-bottom: 8px;
-      display: block;
-    }
-    .note {
-      background: #fff3cd;
-      border-left: 4px solid #ffc107;
-      padding: 12px 20px;
-      border-radius: 0 8px 8px 0;
-      margin: 12px 0;
-      font-size: 0.9em;
-    }
-    .note strong { color: #856404; }
-    .warning {
-      background: #f8d7da;
-      border-left: 4px solid #dc3545;
-      padding: 12px 20px;
-      border-radius: 0 8px 8px 0;
-      margin: 12px 0;
-      font-size: 0.9em;
-    }
-    .warning strong { color: #721c24; }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 16px 0;
-    }
-    th, td {
-      padding: 10px 14px;
-      text-align: left;
-      border-bottom: 1px solid #e0e0e0;
-    }
-    th { background: #f0efff; color: #2d2d44; font-weight: 600; }
-    hr { border: none; border-top: 1px solid #e0e0e0; margin: 32px 0; }
-    .footer {
-      text-align: center;
-      color: #999;
-      font-size: 0.9em;
-      margin-top: 40px;
-    }
-    .footer a { color: #6c63ff; text-decoration: none; }
-    .footer a:hover { text-decoration: underline; }
-    .footer .credit { margin-top: 12px; }
+    .lang-switch a.active { font-weight: 700; color: #1f2328; }
+    .lang-switch .sep { margin: 0 8px; color: #d0d7de; }
+    .markdown-body img { max-width: 100%; border-radius: 6px; }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="lang-switch">
-      <a href="#" class="active">English</a>
-      <span class="sep">|</span>
-      <a href="README.ko.md">한국어</a>
-    </div>
-
-    <h1>TDD Prompts for AI Agents</h1>
-    <p class="subtitle">Prompts That Dramatically Reduce AI Rework: Test-Driven Development for AI coding agents.</p>
-
-    <img src="assets/1000576710.jpg" alt="TDD Prompts for AI" class="hero-img">
-
-    <h2>What Is This?</h2>
-    <p>A collection of battle-tested prompts for applying <strong>Test-Driven Development (TDD)</strong> with AI coding agents (Claude, GPT, Gemini, Codex, etc.).</p>
-    <p><strong>The core idea:</strong> TDD embeds long-term memory directly into your source code — so when your AI agent loses context, the tests remember what the code is supposed to do.</p>
-    <blockquote>
-      <p>Long-term memory for planning → Markdown files</p>
-      <p>Long-term memory for development → TDD</p>
-    </blockquote>
-
-    <h2>Why TDD for AI?</h2>
-    <p>Humans struggle with TDD because MVP deadlines feel urgent. AI agents have the same time pressure — but unlike humans, they <strong>can actually handle the workload</strong>.</p>
-    <p>TDD doesn't shine during MVP development. It shines:</p>
-    <ul style="margin-left:24px;margin-bottom:16px;">
-      <li><strong>During real service operation</strong> — catching bugs before your users do</li>
-      <li><strong>During agent handoff</strong> — when you switch from one AI agent to another, tests serve as the specification</li>
-      <li><strong>When context windows reset</strong> — tests persist where session memory doesn't</li>
-    </ul>
-
-    <h2>TDD vs. Harness Pattern</h2>
-    <table>
-      <tr><th></th><th>Harness</th><th>TDD</th></tr>
-      <tr><td><strong>Purpose</strong></td><td>Build MVP fast</td><td>Ensure long-term code quality</td></tr>
-      <tr><td><strong>QA</strong></td><td>Included</td><td>Separate, after tests pass</td></tr>
-      <tr><td><strong>When to apply</strong></td><td>First (MVP phase)</td><td>After MVP is stable</td></tr>
-      <tr><td><strong>Scope</strong></td><td>New features</td><td>Entire codebase refactor</td></tr>
-    </table>
-    <p>They can be used together, but it's wise to apply them <strong>separately</strong> — build with Harness first, then harden with TDD.</p>
-
-    <h2>Prompts</h2>
-
-    <p><strong>1. Start TDD</strong></p>
-    <div class="prompt-box">
-      <span class="prompt-label">"Are we actually doing Test-Driven Development (TDD) right now?"</span>
-    </div>
-    <div class="note"><strong>Note:</strong> TDD assumes a terminal/CLI environment. If you apply TDD to UI/Frontend work, it can reduce design creativity — choose whether to include it.<br>Example: <em>(continuing the same prompt)</em> "But exclude the frontend from TDD."</div>
-
-    <p><strong>2. Full-Scope TDD</strong></p>
-    <div class="prompt-box">
-      <span class="prompt-label">"Refactor the entire project using Test-Driven Development (TDD)."</span>
-    </div>
-    <div class="note"><strong>Note:</strong> The main agent tends to minimize its workload. Unless you say "entire project," it will only apply TDD to new tasks. If this is a team project, specify which folders must not be touched.</div>
-
-    <p><strong>3. Uninterrupted Multi-Agent</strong></p>
-    <div class="prompt-box">
-      <span class="prompt-label">"Proceed through Phase 1 to Phase 10 without interruption. If a sub-agent times out, retry up to three times. If it still fails, the main agent should handle only that sprint and then move on."</span>
-    </div>
-
-    <p><strong>4. Progress Check</strong></p>
-    <div class="prompt-box">
-      <span class="prompt-label">"Is everything going smoothly?"</span>
-    </div>
-    <div class="warning"><strong>⚠️ Do NOT say "Check the progress."</strong> The keyword "check" makes the agent interpret it as a new task, causing it to abandon the original work entirely.</div>
-
-    <p><strong>5. Verify Tests</strong></p>
-    <div class="prompt-box">
-      <span class="prompt-label">"Run the tests yourself and verify the results."</span>
-    </div>
-    <p>Even after finishing TDD, the main agent often won't run the test suite and will just hand it back to you.</p>
-
-    <p><strong>6. QA & Code Review</strong></p>
-    <div class="prompt-box">
-      <span class="prompt-label">"Do QA and code review."</span>
-    </div>
-    <div class="warning"><strong>⚠️ Say this only after the entire test suite passes safely.</strong> If the tests are not stable yet, fix them manually first. Otherwise, the agent may end up damaging the entire codebase.</div>
-
-    <h2>TDD in the AI Era</h2>
-    <p>TDD is a development methodology where AI catches errors at <strong>build time</strong> (source code level) — before <strong>runtime</strong> (when users encounter them). The formal definition of TDD is different, but in the AI era, this interpretation works.</p>
-    <p>If you've been relying on markdown files for long-term memory because session memory disappears, TDD becomes a way to embed long-term memory directly into the source code.</p>
-
-    <h2>Summary</h2>
-    <blockquote>
-      <p><strong>Planning memory → Markdown files</strong></p>
-      <p><strong>Development memory → TDD</strong></p>
-    </blockquote>
-
-    <hr>
-    <div class="footer">
-      <a href="https://github.com/haseo-ai/tdd-prompts-ai">📄 View Source on GitHub</a>
-      <div class="credit">Made by <a href="https://github.com/haseo-ai">haseo-ai</a> ♥ with oclo</div>
-    </div>
+  <div class="lang-switch">
+    <a href="index.html" class="active">English</a>
+    <span class="sep">|</span>
+    <a href="index.ko.html">한국어</a>
   </div>
+  <article class="markdown-body">
+
+# TDD Prompts for AI Agents
+
+> Prompts That Dramatically Reduce AI Rework: Test-Driven Development for AI coding agents.
+
+![TDD Prompts for AI](assets/1000576710.jpg)
+
+---
+
+## What Is This?
+
+A collection of battle-tested prompts for applying **Test-Driven Development (TDD)** with AI coding agents (Claude, GPT, Gemini, Codex, etc.).
+
+**The core idea:** TDD embeds long-term memory directly into your source code — so when your AI agent loses context, the tests remember what the code is supposed to do.
+
+> *Long-term memory for planning → Markdown files*
+> *Long-term memory for development → TDD*
+
+---
+
+## Why TDD for AI?
+
+Humans struggle with TDD because MVP deadlines feel urgent. AI agents have the same time pressure — but unlike humans, they **can actually handle the workload**.
+
+TDD doesn't shine during MVP development. It shines:
+
+- **During real service operation** — catching bugs before your users do
+- **During agent handoff** — when you switch from one AI agent to another, tests serve as the specification
+- **When context windows reset** — tests persist where session memory doesn't
+
+---
+
+## TDD vs. Harness Pattern
+
+| | Harness | TDD |
+|---|---|---|
+| Purpose | Build MVP fast | Ensure long-term code quality |
+| QA | Included | Separate, after tests pass |
+| When to apply | First (MVP phase) | After MVP is stable |
+| Scope | New features | Entire codebase refactor |
+
+They can be used together, but it's wise to apply them **separately** — build with Harness first, then harden with TDD.
+
+---
+
+## Prompts
+
+### 1. Start TDD
+
+```
+"Are we actually doing Test-Driven Development (TDD) right now?"
+```
+
+> **Note:** TDD assumes a terminal/CLI environment. If you apply TDD to UI/Frontend work, it can reduce design creativity — choose whether to include it.
+>
+> Example: *(continuing the same prompt)* "But exclude the frontend from TDD."
+
+### 2. Full-Scope TDD
+
+```
+"Refactor the entire project using Test-Driven Development (TDD)."
+```
+
+> The main agent tends to minimize its workload to reduce token usage. Unless you say "entire project," it will only apply TDD to new tasks.
+>
+> **Note:** If this is a team project or open-source contribution, specify which folders must not be touched.
+>
+> Example: *(continuing the same prompt)* "But never touch OOO, and limit changes to OOO. This rule applies only to this project, so don't store it in the global workspace memory — keep it only in the project's internal memory."
+
+### 3. Uninterrupted Multi-Agent
+
+```
+"Proceed through Phase 1 to Phase 10 without interruption.
+If a sub-agent times out, retry up to three times.
+If it still fails, the main agent should handle only that sprint and then move on."
+```
+
+> "Phase 1–10" is just an example — adjust according to what the main agent defines.
+
+### 4. Progress Check (Careful!)
+
+```
+"Is everything going smoothly?"
+```
+
+> ⚠️ **Do NOT say "Check the progress."** The keyword "check" makes the agent interpret it as a **new task**, causing it to abandon the original work entirely.
+
+### 5. Verify Tests
+
+```
+"Run the tests yourself and verify the results."
+```
+
+> Even after finishing TDD, the main agent often won't run the test suite and will just hand it back to you.
+
+### 6. QA & Code Review
+
+```
+"Do QA and code review."
+```
+
+> Say this **only after the entire test suite passes safely**. During TDD, the agent may have broken the original spec or discovered hidden issues.
+>
+> ⚠️ **Warning:** If the tests are not stable yet, do NOT say this. Fix the tests manually first. Otherwise, the agent will repeatedly try to fix things that were never working and may end up damaging the entire codebase.
+
+---
+
+## TDD in the AI Era
+
+TDD is a development methodology where AI catches errors at **build time** (source code level) — before **runtime** (when users encounter them). The formal definition of TDD is different, but in the AI era, this interpretation works.
+
+If you've been relying on markdown files for long-term memory because session memory disappears, TDD becomes a way to embed long-term memory directly into the source code.
+
+---
+
+## Summary
+
+> **Planning memory → Markdown files**
+> **Development memory → TDD**
+
+---
+
+[📄 View Source on GitHub](https://github.com/haseo-ai/tdd-prompts-ai)
+
+---
+
+*Made by [haseo-ai](https://github.com/haseo-ai) ♥ with oclo*
+
+  </article>
 </body>
 </html>
